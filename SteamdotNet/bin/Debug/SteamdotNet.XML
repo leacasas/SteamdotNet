@@ -4,5 +4,16 @@
         <name>SteamdotNet</name>
     </assembly>
     <members>
+        <member name="T:SteamdotNet.Parsing.JSON.JSONParser">
+            <summary>
+            First rudimentary implementation of a JSON parser, reading a JSON file from a REST service.
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Parsing.JSON.JSONParser.ReadJSONfromURL">
+            <summary>
+            Reads the JSON returned from a service URL. The JSON is parsed into a dynamic object.
+            </summary>
+            <returns>Details of the JSON object.</returns>
+        </member>
     </members>
 </doc>
