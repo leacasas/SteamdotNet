@@ -18,7 +18,7 @@ namespace SteamdotNet.Parsing
             using (var webClient = new WebClient())
             {
                 var json = webClient.DownloadString(url);
-                dynamic result = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+                dynamic result = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json);
                 return (T)result;
             }
         }
