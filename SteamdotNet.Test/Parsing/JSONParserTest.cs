@@ -1,7 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SteamdotNet.Parsing;
 using SteamdotNet.Test.Common;
+using System;
 
 namespace SteamdotNet.Test.Parsing
 {
