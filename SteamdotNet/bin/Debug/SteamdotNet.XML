@@ -28,27 +28,93 @@
             <summary>
             Contains the parameters for the ISteamApps interface.
             It encapsulates the parameters for each method in structs.
+            Cannot be inherited.
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.SteamAppsParameters.GetAppList">
             <summary>
-            Parameters for SteamAppsParameters.GetAppList
+            Parameters for ISteamApps.GetAppList
             </summary>
         </member>
-        <member name="T:SteamdotNet.Common.SteamAppsParameters.GetServersAtAdress">
+        <member name="P:SteamdotNet.Common.SteamAppsParameters.GetAppList.BaseParameters">
             <summary>
-            Parameters for SteamAppsParameters.GetServersAtAdress
+            Key, Format and Language parameters.
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress">
+            <summary>
+            Parameters for ISteamApps.GetServersAtAddress
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress.#ctor(System.String)">
+            <summary>
+            Constructs the parameters for ISteamApps.GetServersAtAddress
+            </summary>
+            <param name="addr">IP address of the server (IPv4 format)</param>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress.BaseParameters">
+            <summary>
+            Key, Format and Language parameters.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress.Addr">
+            <summary>
+            IP address of the server (IPv4 format)
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck">
             <summary>
-            Parameters for SteamAppsParameters.UpToDateCheck
+            Parameters for ISteamApps.UpToDateCheck
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            Construct the parameters for ISteamApps.UpToDateCheck
+            </summary>
+            <param name="appid">AppID of game. For example, Team Fortress 2 is 440.</param>
+            <param name="version">Installed version of the game.</param>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.BaseParameters">
+            <summary>
+            Key, Format and Language parameters.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.AppId">
+            <summary>
+            AppID of game. For example, Team Fortress 2 is 440.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.Version">
+            <summary>
+            Installed version of the game.
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.SteamBaseParameters">
             <summary>
-            This struct contains the three common parameters that can be used
-            in all of the methods of all interfaces of the Steam Web API.
+            
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.SteamBaseParameters.#ctor(System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="format"></param>
+            <param name="language"></param>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamBaseParameters.Key">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamBaseParameters.Format">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamBaseParameters.Language">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:SteamdotNet.ISteamApps">
@@ -106,15 +172,16 @@
             </summary>
             <returns>SteamBaseParameters object</returns>
         </member>
-        <member name="M:SteamdotNet.SteamdotNetFactory.CreateMethodUrl``1(System.String,``0)">
+        <member name="M:SteamdotNet.SteamdotNetFactory.CreateMethodUrl``1(System.String,SteamdotNet.Common.SteamBaseParameters,``0)">
             <summary>
-            Generates the URL for a method call, using a base URL and
-            an object containing all the parameters
+            Construct a valid call to the given API method providing the base URL and
+            all the optional and required parameters.
             </summary>
-            <param name="baseURL">The base URL of the method.</param>
-            <param name="parameters">All the required and optional parameters</param>
+            <param name="baseURL">Public URL of the API Method</param>
+            <param name="baseParameters">Key, Format and language parameters</param>
+            <param name="parameters">Method-specific parameters, they are contained in a struct</param>
             <typeparam name="T">struct</typeparam>
-            <returns>Complete URL to perform a method call</returns>
+            <returns>Valid URL ready to call the API method</returns>
         </member>
     </members>
 </doc>

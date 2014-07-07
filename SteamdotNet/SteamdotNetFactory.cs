@@ -1,4 +1,6 @@
 ﻿using SteamdotNet.Common;
+using System.Linq;
+using System.Text;
 
 namespace SteamdotNet
 {
@@ -14,20 +16,28 @@ namespace SteamdotNet
         /// <returns>SteamBaseParameters object</returns>
         public static SteamBaseParameters CreateBaseParameters()
         {
-            return new SteamBaseParameters(string.Empty, OutputFileFormat.JSON, string.Empty);
+            //TODO: Read key from configuration, manage language values
+            return new SteamBaseParameters("abcdefghijklmnpqrsstuvwxyz", OutputFileFormat.JSON, "en");
         }
 
         /// <summary>
-        /// Generates the URL for a method call, using a base URL and
-        /// an object containing all the parameters
+        /// Construct a valid call to the given API method providing the base URL and
+        /// all the optional and required parameters.
         /// </summary>
-        /// <param name="baseURL">The base URL of the method.</param>
-        /// <param name="parameters">All the required and optional parameters</param>
+        /// <param name="baseURL">Public URL of the API Method</param>
+        /// <param name="baseParameters">Key, Format and language parameters</param>
+        /// <param name="parameters">Method-specific parameters, they are contained in a struct</param>
         /// <typeparam name="T">struct</typeparam>
-        /// <returns>Complete URL to perform a method call</returns>
-        public static string CreateMethodUrl<T>(string baseURL, T parameters) where T : struct
+        /// <returns>Valid URL ready to call the API method</returns>
+        public static string CreateMethodUrl<T>(string baseURL, SteamBaseParameters baseParameters, T parameters) where T : struct
         {
-            return string.Empty;
+            var urlBuilder = new StringBuilder();
+            urlBuilder.AppendFormat("{0}?key={1}&format={2}&language={3}", baseURL, baseParameters.Key, baseParameters.Format, baseParameters.Language);
+            foreach (var propertyInfo in parameters.GetType().GetProperties().Where(propertyInfo => propertyInfo.PropertyType != typeof(SteamBaseParameters)))
+            {
+                urlBuilder.AppendFormat("&{0}={1}", propertyInfo.Name, propertyInfo.GetValue(parameters, null));
+            }
+            return urlBuilder.ToString();
         }
     }
 }

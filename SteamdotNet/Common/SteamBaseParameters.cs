@@ -1,16 +1,32 @@
 ﻿namespace SteamdotNet.Common
 {
     /// <summary>
-    /// This struct contains the three common parameters that can be used
-    /// in all of the methods of all interfaces of the Steam Web API.
+    /// 
     /// </summary>
     public struct SteamBaseParameters
     {
-        internal string Key { get; set; }
-        internal OutputFileFormat Format { get; set; }
-        internal string Language { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Key { get; set; }
 
-        internal SteamBaseParameters(string key, OutputFileFormat format, string language) : this()
+        /// <summary>
+        /// 
+        /// </summary>
+        public OutputFileFormat Format { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Language { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="format"></param>
+        /// <param name="language"></param>
+        public SteamBaseParameters(string key, OutputFileFormat format, string language) : this()
         {
             Key = key;
             Format = format;

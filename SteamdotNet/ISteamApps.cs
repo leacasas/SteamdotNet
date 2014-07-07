@@ -9,7 +9,7 @@ namespace SteamdotNet
     internal interface ISteamApps
     {
         SteamAppsData.GetAppListResponse GetAppList(SteamAppsParameters.GetAppList parameters);
-        SteamAppsData.GetServersAtAddressResponse GetServersAtAddress(SteamAppsParameters.GetServersAtAdress parameters);
+        SteamAppsData.GetServersAtAddressResponse GetServersAtAddress(SteamAppsParameters.GetServersAtAddress parameters);
         SteamAppsData.UpToDateCheckResponse UpToDateCheck(SteamAppsParameters.UpToDateCheck parameters);
     }
 }

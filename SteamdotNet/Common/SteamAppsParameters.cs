@@ -3,52 +3,81 @@
     /// <summary>
     /// Contains the parameters for the ISteamApps interface.
     /// It encapsulates the parameters for each method in structs.
+    /// Cannot be inherited.
     /// </summary>
-    internal sealed class SteamAppsParameters
+    public sealed class SteamAppsParameters
     {
         /// <summary>
-        /// Parameters for SteamAppsParameters.GetAppList
+        /// Parameters for ISteamApps.GetAppList
         /// </summary>
-        internal struct GetAppList
+        public struct GetAppList
         {
-            internal SteamBaseParameters BaseParameters
+            /// <summary>
+            /// Key, Format and Language parameters.
+            /// </summary>
+            public SteamBaseParameters BaseParameters
             {
                 get { return SteamdotNetFactory.CreateBaseParameters(); }
             }
         }
 
         /// <summary>
-        /// Parameters for SteamAppsParameters.GetServersAtAdress
+        /// Parameters for ISteamApps.GetServersAtAddress
         /// </summary>
-        internal struct GetServersAtAdress
+        public struct GetServersAtAddress
         {
-            internal SteamBaseParameters BaseParameters
+            /// <summary>
+            /// Key, Format and Language parameters.
+            /// </summary>
+            public SteamBaseParameters BaseParameters
             {
                 get { return SteamdotNetFactory.CreateBaseParameters(); }
             }
 
-            internal string Addr { get; set; }
+            /// <summary>
+            /// IP address of the server (IPv4 format)
+            /// </summary>
+            public string Addr { get; set; }
 
-            internal GetServersAtAdress(string addr) : this()
+            /// <summary>
+            /// Constructs the parameters for ISteamApps.GetServersAtAddress
+            /// </summary>
+            /// <param name="addr">IP address of the server (IPv4 format)</param>
+            public GetServersAtAddress(string addr) : this()
             {
                 Addr = addr;
             }
         }
 
         /// <summary>
-        /// Parameters for SteamAppsParameters.UpToDateCheck
+        /// Parameters for ISteamApps.UpToDateCheck
         /// </summary>
-        internal struct UpToDateCheck
+        public struct UpToDateCheck
         {
-            internal SteamBaseParameters BaseParameters
+            /// <summary>
+            /// Key, Format and Language parameters.
+            /// </summary>
+            public SteamBaseParameters BaseParameters
             {
                 get { return SteamdotNetFactory.CreateBaseParameters(); }
             }
 
-            internal uint AppId { get; set; }
-            internal uint Version { get; set; }
+            /// <summary>
+            /// AppID of game. For example, Team Fortress 2 is 440.
+            /// </summary>
+            public uint AppId { get; set; }
 
-            internal UpToDateCheck(uint appid, uint version) : this()
+            /// <summary>
+            /// Installed version of the game.
+            /// </summary>
+            public uint Version { get; set; }
+
+            /// <summary>
+            /// Construct the parameters for ISteamApps.UpToDateCheck
+            /// </summary>
+            /// <param name="appid">AppID of game. For example, Team Fortress 2 is 440.</param>
+            /// <param name="version">Installed version of the game.</param>
+            public UpToDateCheck(uint appid, uint version) : this()
             {
                 AppId = appid;
                 Version = version;
