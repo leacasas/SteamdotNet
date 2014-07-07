@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SteamdotNet.Tests.Parsing.JSONParser
+namespace SteamdotNet.Test.Parsing.JSONParser
 {
     [TestClass]
-    public class UnitTest1
+    public class JSONParserTest
     {
         [TestMethod]
         public void TestMethod1()

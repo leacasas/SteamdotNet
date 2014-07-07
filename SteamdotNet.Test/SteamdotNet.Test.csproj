@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1DA06FFF-247C-4D79-B82E-DAF41F1A72A3}</ProjectGuid>
+    <ProjectGuid>{6723B4CB-1A96-496D-B47A-0483460DEBCF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SteamdotNet.Tests</RootNamespace>
-    <AssemblyName>SteamdotNet.Tests</AssemblyName>
+    <RootNamespace>SteamdotNet.Test</RootNamespace>
+    <AssemblyName>SteamdotNet.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,12 +50,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Parsing\JSONParser\UnitTest1.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Parsing\JSONParser\JSONParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SteamdotNet.csproj">
+    <ProjectReference Include="..\SteamdotNet\SteamdotNet.csproj">
       <Project>{7d2b6d67-ce3a-4653-ac60-64ab68810811}</Project>
       <Name>SteamdotNet</Name>
     </ProjectReference>

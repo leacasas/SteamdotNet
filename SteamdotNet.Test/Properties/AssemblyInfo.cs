@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SteamdotNet.Tests")]
+[assembly: AssemblyTitle("SteamdotNet.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SteamdotNet.Tests")]
+[assembly: AssemblyProduct("SteamdotNet.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d00e9bb2-f47d-49ef-8de6-bdf727b5d8a2")]
+[assembly: Guid("65aefbe2-f1e4-4132-918d-54c593feb445")]
 
 // Version information for an assembly consists of the following four values:
 //
