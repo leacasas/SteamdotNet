@@ -124,6 +124,121 @@
             JSON: root.applist.apps
             </summary>
         </member>
+        <member name="T:SteamdotNet.Common.SteamApps.GetServersAtAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.GetServersAtAddress.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamApps.Server">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Addr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Gmsindex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Appid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Gamedir">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Secure">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Lan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Gameport">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.Server.Specport">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamApps.GetServersAtAddressResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.GetServersAtAddressResponse.Success">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.GetServersAtAddressResponse.Servers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamApps.UpToDateCheckResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Success">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Up_to_date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Version_is_listable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Required_version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamApps.UpToDateCheck">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheck.Response">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:SteamdotNet.Common.SteamBaseParameters">
             <summary>
             
