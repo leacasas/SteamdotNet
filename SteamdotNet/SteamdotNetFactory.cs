@@ -17,7 +17,7 @@ namespace SteamdotNet
         public static SteamBaseParameters CreateBaseParameters()
         {
             //TODO: Read key from configuration, manage language values
-            return new SteamBaseParameters("abcdefghijklmnpqrsstuvwxyz", OutputFileFormat.JSON, "en");
+            return new SteamBaseParameters("169C903286C458B4B49D90D77C447295", OutputFileFormat.JSON, "en");
         }
 
         /// <summary>

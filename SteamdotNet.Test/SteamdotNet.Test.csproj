@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Common\JsonDummy.cs" />
+    <Compile Include="ISteamApps\MethodCalls.cs" />
     <Compile Include="ISteamApps\URLCreation.cs" />
     <Compile Include="Parsing\JSONParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

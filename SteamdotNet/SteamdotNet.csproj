@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\OutputFileFormat.cs" />
-    <Compile Include="Common\SteamAppsData.cs" />
     <Compile Include="Common\SteamAppsParameters.cs" />
+    <Compile Include="Common\SteamApps\GetAppList.cs" />
+    <Compile Include="Common\SteamApps\GetServersAtAddress.cs" />
+    <Compile Include="Common\SteamApps\UpToDateCheck.cs" />
     <Compile Include="Common\SteamBaseParameters.cs" />
     <Compile Include="ISteamApps.cs" />
     <Compile Include="Parsing\BaseParser.cs" />

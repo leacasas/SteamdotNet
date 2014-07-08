@@ -89,6 +89,41 @@
             Installed version of the game.
             </summary>
         </member>
+        <member name="T:SteamdotNet.Common.SteamApps.GetAppList">
+            <summary>
+            JSON: Root object
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.GetAppList.Applist">
+            <summary>
+            JSON: root.applist
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamApps.App">
+            <summary>
+            JSON: root.applist.apps
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.App.Appid">
+            <summary>
+            JSON: root.applist.apps[].appid
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.App.Name">
+            <summary>
+            JSON: root.applist.apps[].name
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamApps.AppList">
+            <summary>
+            JSON: root.applist
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.SteamApps.AppList.Apps">
+            <summary>
+            JSON: root.applist.apps
+            </summary>
+        </member>
         <member name="T:SteamdotNet.Common.SteamBaseParameters">
             <summary>
             
@@ -145,6 +180,7 @@
         <member name="M:SteamdotNet.Parsing.JSONParser.ParseFromURL``1(System.String)">
             <summary>
             Parses a JSON from a service call to a given object type.
+            It deserializes directly to a stream to reduce memory usage.
             </summary>
             <param name="url">URL of the service to call</param>
             <typeparam name="T">Type of object to return</typeparam>

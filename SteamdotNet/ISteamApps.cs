@@ -1,4 +1,5 @@
 ﻿using SteamdotNet.Common;
+using SteamdotNet.Common.SteamApps;
 
 namespace SteamdotNet
 {
@@ -8,8 +9,8 @@ namespace SteamdotNet
     /// </summary>
     internal interface ISteamApps
     {
-        SteamAppsData.GetAppListResponse GetAppList(SteamAppsParameters.GetAppList parameters);
-        SteamAppsData.GetServersAtAddressResponse GetServersAtAddress(SteamAppsParameters.GetServersAtAddress parameters);
-        SteamAppsData.UpToDateCheckResponse UpToDateCheck(SteamAppsParameters.UpToDateCheck parameters);
+        GetAppList GetAppList(SteamAppsParameters.GetAppList parameters);
+        GetServersAtAddress GetServersAtAddress(SteamAppsParameters.GetServersAtAddress parameters);
+        UpToDateCheck UpToDateCheck(SteamAppsParameters.UpToDateCheck parameters);
     }
 }
