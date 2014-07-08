@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SteamdotNet.Common;
-using SteamdotNet.Common.SteamApps;
+using SteamdotNet.Common.ISteamApps;
+using SteamdotNet.Common.ISteamApps.Data;
 
 namespace SteamdotNet.Test.ISteamApps
 {
@@ -12,31 +12,31 @@ namespace SteamdotNet.Test.ISteamApps
         {
             var steamAppsInterface = new SteamApps();
             var parameters = new SteamAppsParameters.GetAppList("169C903286C458B4B49D90D77C447295");
-            var result = steamAppsInterface.GetAppList(parameters);
+            GetAppList result = steamAppsInterface.GetAppList(parameters);
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result, typeof(GetAppList));
+            Assert.IsInstanceOfType(result, typeof (GetAppList));
             Assert.IsNotNull(result.Applist);
-            Assert.IsInstanceOfType(result.Applist, typeof(AppList));
+            Assert.IsInstanceOfType(result.Applist, typeof (AppList));
             Assert.IsNotNull(result.Applist.Apps);
-            Assert.IsInstanceOfType(result.Applist.Apps, typeof(App[]));
+            Assert.IsInstanceOfType(result.Applist.Apps, typeof (App[]));
             Assert.IsTrue(result.Applist.Apps.Length > 0);
-            Assert.IsInstanceOfType(result.Applist.Apps[0], typeof(App));
+            Assert.IsInstanceOfType(result.Applist.Apps[0], typeof (App));
         }
 
         [TestMethod]
-        public void TestGetServerAtAddress()
+        public void TestGetServersAtAddress()
         {
             var steamAppsInterface = new SteamApps();
             var parameters = new SteamAppsParameters.GetServersAtAddress("64.94.100.204", "169C903286C458B4B49D90D77C447295");
-            var result = steamAppsInterface.GetServersAtAddress(parameters);
+            GetServersAtAddress result = steamAppsInterface.GetServersAtAddress(parameters);
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result, typeof(GetServersAtAddress));
+            Assert.IsInstanceOfType(result, typeof (GetServersAtAddress));
             Assert.IsNotNull(result.Response);
-            Assert.IsInstanceOfType(result.Response, typeof(GetServersAtAddressResponse));
+            Assert.IsInstanceOfType(result.Response, typeof (GetServersAtAddressResponse));
             Assert.IsNotNull(result.Response.Success);
-            Assert.IsInstanceOfType(result.Response.Success, typeof(bool));
+            Assert.IsInstanceOfType(result.Response.Success, typeof (bool));
             Assert.IsNotNull(result.Response.Servers);
-            Assert.IsInstanceOfType(result.Response.Servers, typeof(Server[]));
+            Assert.IsInstanceOfType(result.Response.Servers, typeof (Server[]));
         }
 
         [TestMethod]
@@ -44,16 +44,16 @@ namespace SteamdotNet.Test.ISteamApps
         {
             var steamAppsInterface = new SteamApps();
             var parameters = new SteamAppsParameters.UpToDateCheck(440, 1, "169C903286C458B4B49D90D77C447295");
-            var result = steamAppsInterface.UpToDateCheck(parameters);
+            UpToDateCheck result = steamAppsInterface.UpToDateCheck(parameters);
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result, typeof(UpToDateCheck));
+            Assert.IsInstanceOfType(result, typeof (UpToDateCheck));
             Assert.IsNotNull(result.Response);
-            Assert.IsInstanceOfType(result.Response, typeof(UpToDateCheckResponse));
+            Assert.IsInstanceOfType(result.Response, typeof (UpToDateCheckResponse));
             Assert.IsFalse(string.IsNullOrEmpty(result.Response.Message));
-            Assert.IsInstanceOfType(result.Response.Required_version, typeof(int));
-            Assert.IsInstanceOfType(result.Response.Success, typeof(bool));
-            Assert.IsInstanceOfType(result.Response.Up_to_date, typeof(bool));
-            Assert.IsInstanceOfType(result.Response.Version_is_listable, typeof(bool));
+            Assert.IsInstanceOfType(result.Response.Required_version, typeof (int));
+            Assert.IsInstanceOfType(result.Response.Success, typeof (bool));
+            Assert.IsInstanceOfType(result.Response.Up_to_date, typeof (bool));
+            Assert.IsInstanceOfType(result.Response.Version_is_listable, typeof (bool));
         }
     }
 }

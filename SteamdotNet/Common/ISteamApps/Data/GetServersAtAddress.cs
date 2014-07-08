@@ -1,4 +1,4 @@
-﻿namespace SteamdotNet.Common.SteamApps
+﻿namespace SteamdotNet.Common.ISteamApps.Data
 {
     /// <summary>
     /// JSON: Root object

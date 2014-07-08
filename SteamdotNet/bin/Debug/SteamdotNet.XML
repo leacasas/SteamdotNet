@@ -4,6 +4,249 @@
         <name>SteamdotNet</name>
     </assembly>
     <members>
+        <member name="T:SteamdotNet.BaseSteamImplementer">
+            <summary>
+            Base class for all the interface implementation.
+            This class holds common helper functions for all the
+            interface implementations.
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.BaseSteamImplementer.ResolveParserType(SteamdotNet.Common.OutputFileFormat)">
+            <summary>
+            Returns the most suitable parser for the given output format
+            </summary>
+            <param name="fileFormat">Output file format</param>
+            <returns>The most suitable parser object</returns>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.GetAppList">
+            <summary>
+            JSON: Root object
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.GetAppList.Applist">
+            <summary>
+            JSON: root.applist
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.App">
+            <summary>
+            JSON: root.applist.apps
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.App.Appid">
+            <summary>
+            JSON: root.applist.apps[].appid
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.App.Name">
+            <summary>
+            JSON: root.applist.apps[].name
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.AppList">
+            <summary>
+            JSON: root.applist
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.AppList.Apps">
+            <summary>
+            JSON: root.applist.apps
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddress">
+            <summary>
+            JSON: Root object
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddress.Response">
+            <summary>
+            JSON: root.response
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.Server">
+            <summary>
+            JSON: root.reponse.server[]
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Addr">
+            <summary>
+            JSON:  root.response.server[].addr
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Gmsindex">
+            <summary>
+            JSON:  root.response.server[].gmsindex
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Appid">
+            <summary>
+            JSON:  root.response.server[].appid
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Gamedir">
+            <summary>
+            JSON:  root.response.server[].gamedir
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Region">
+            <summary>
+            JSON:  root.response.server[].region
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Secure">
+            <summary>
+            JSON:  root.response.server[].secure
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Lan">
+            <summary>
+            JSON:  root.response.server[].lan
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Gameport">
+            <summary>
+            JSON:  root.response.server[].gameport
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Specport">
+            <summary>
+            JSON:  root.response.server[].specport
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddressResponse">
+            <summary>
+            JSON: root.response
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddressResponse.Success">
+            <summary>
+            JSON: root.response.success
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddressResponse.Servers">
+            <summary>
+            JSON: root.success.servers[]
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.UpToDateCheck">
+            <summary>
+            JSON: root object
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheck.Response">
+            <summary>
+            JSON: root.response
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse">
+            <summary>
+            JSON: root.response
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse.Success">
+            <summary>
+            root.response.success
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse.Up_to_date">
+            <summary>
+            root.response.up_to_date
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse.Version_is_listable">
+            <summary>
+            root.response.version_is_listable
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse.Required_version">
+            <summary>
+            root.response.required_version
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse.Message">
+            <summary>
+            root.response.message
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.SteamAppsParameters">
+            <summary>
+            Contains the parameters for the ISteamApps interface.
+            It encapsulates the parameters for each method in structs.
+            Cannot be inherited.
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetAppList">
+            <summary>
+            Parameters for ISteamApps.GetAppList
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetAppList.#ctor(System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+            <summary>
+            Constructs the parameters for ISteamApps.GetAppList
+            </summary>
+            <param name="key">Steam API developer key</param>
+            <param name="format">Output file format</param>
+            <param name="language">ISO639-1 country code</param>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetAppList.BaseParameters">
+            <summary>
+            Key, Format and Language parameters.
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetServersAtAddress">
+            <summary>
+            Parameters for ISteamApps.GetServersAtAddress
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetServersAtAddress.#ctor(System.String,System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+            <summary>
+            Constructs the parameters for ISteamApps.GetServersAtAddress
+            </summary>
+            <param name="addr">IP address of the server (IPv4 format)</param>
+            <param name="key">Steam API developer key</param>
+            <param name="format">Output file format</param>
+            <param name="language">ISO639-1 country code</param>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetServersAtAddress.BaseParameters">
+            <summary>
+            Key, Format and Language parameters.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetServersAtAddress.Addr">
+            <summary>
+            IP address of the server (IPv4 format)
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck">
+            <summary>
+            Parameters for ISteamApps.UpToDateCheck
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck.#ctor(System.UInt32,System.UInt32,System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+            <summary>
+            Creates the parameters for ISteamApps.UpToDateCheck
+            </summary>
+            <param name="appid"></param>
+            <param name="version"></param>
+            <param name="key">Steam API developer key</param>
+            <param name="format">Output file format</param>
+            <param name="language">ISO639-1 country code</param>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck.BaseParameters">
+            <summary>
+            Key, Format and Language parameters.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck.AppId">
+            <summary>
+            AppID of game. For example, Team Fortress 2 is 440.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck.Version">
+            <summary>
+            Installed version of the game.
+            </summary>
+        </member>
         <member name="T:SteamdotNet.Common.OutputFileFormat">
             <summary>
             Contains all three output options
@@ -22,235 +265,6 @@
         <member name="F:SteamdotNet.Common.OutputFileFormat.VDF">
             <summary>
             Valve Data Format output
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamAppsParameters">
-            <summary>
-            Contains the parameters for the ISteamApps interface.
-            It encapsulates the parameters for each method in structs.
-            Cannot be inherited.
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamAppsParameters.GetAppList">
-            <summary>
-            Parameters for ISteamApps.GetAppList
-            </summary>
-        </member>
-        <member name="M:SteamdotNet.Common.SteamAppsParameters.GetAppList.#ctor(System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
-            <summary>
-            Constructs the parameters for ISteamApps.GetAppList
-            </summary>
-            <param name="key">Steam API developer key</param>
-            <param name="format">Output file format</param>
-            <param name="language">ISO639-1 country code</param>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamAppsParameters.GetAppList.BaseParameters">
-            <summary>
-            Key, Format and Language parameters.
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress">
-            <summary>
-            Parameters for ISteamApps.GetServersAtAddress
-            </summary>
-        </member>
-        <member name="M:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress.#ctor(System.String,System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
-            <summary>
-            Constructs the parameters for ISteamApps.GetServersAtAddress
-            </summary>
-            <param name="addr">IP address of the server (IPv4 format)</param>
-            <param name="key">Steam API developer key</param>
-            <param name="format">Output file format</param>
-            <param name="language">ISO639-1 country code</param>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress.BaseParameters">
-            <summary>
-            Key, Format and Language parameters.
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress.Addr">
-            <summary>
-            IP address of the server (IPv4 format)
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck">
-            <summary>
-            Parameters for ISteamApps.UpToDateCheck
-            </summary>
-        </member>
-        <member name="M:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.#ctor(System.UInt32,System.UInt32,System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
-            <summary>
-            Creates the parameters for ISteamApps.UpToDateCheck
-            </summary>
-            <param name="appid"></param>
-            <param name="version"></param>
-            <param name="key">Steam API developer key</param>
-            <param name="format">Output file format</param>
-            <param name="language">ISO639-1 country code</param>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.BaseParameters">
-            <summary>
-            Key, Format and Language parameters.
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.AppId">
-            <summary>
-            AppID of game. For example, Team Fortress 2 is 440.
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamAppsParameters.UpToDateCheck.Version">
-            <summary>
-            Installed version of the game.
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.GetAppList">
-            <summary>
-            JSON: Root object
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.GetAppList.Applist">
-            <summary>
-            JSON: root.applist
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.App">
-            <summary>
-            JSON: root.applist.apps
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.App.Appid">
-            <summary>
-            JSON: root.applist.apps[].appid
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.App.Name">
-            <summary>
-            JSON: root.applist.apps[].name
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.AppList">
-            <summary>
-            JSON: root.applist
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.AppList.Apps">
-            <summary>
-            JSON: root.applist.apps
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.GetServersAtAddress">
-            <summary>
-            JSON: Root object
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.GetServersAtAddress.Response">
-            <summary>
-            JSON: root.response
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.Server">
-            <summary>
-            JSON: root.reponse.server[]
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Addr">
-            <summary>
-            JSON:  root.response.server[].addr
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Gmsindex">
-            <summary>
-            JSON:  root.response.server[].gmsindex
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Appid">
-            <summary>
-            JSON:  root.response.server[].appid
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Gamedir">
-            <summary>
-            JSON:  root.response.server[].gamedir
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Region">
-            <summary>
-            JSON:  root.response.server[].region
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Secure">
-            <summary>
-            JSON:  root.response.server[].secure
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Lan">
-            <summary>
-            JSON:  root.response.server[].lan
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Gameport">
-            <summary>
-            JSON:  root.response.server[].gameport
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.Server.Specport">
-            <summary>
-            JSON:  root.response.server[].specport
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.GetServersAtAddressResponse">
-            <summary>
-            JSON: root.response
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.GetServersAtAddressResponse.Success">
-            <summary>
-            JSON: root.response.success
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.GetServersAtAddressResponse.Servers">
-            <summary>
-            JSON: root.success.servers[]
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.UpToDateCheck">
-            <summary>
-            JSON: root object
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheck.Response">
-            <summary>
-            JSON: root.response
-            </summary>
-        </member>
-        <member name="T:SteamdotNet.Common.SteamApps.UpToDateCheckResponse">
-            <summary>
-            JSON: root.response
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Success">
-            <summary>
-            root.response.success
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Up_to_date">
-            <summary>
-            root.response.up_to_date
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Version_is_listable">
-            <summary>
-            root.response.version_is_listable
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Required_version">
-            <summary>
-            root.response.required_version
-            </summary>
-        </member>
-        <member name="P:SteamdotNet.Common.SteamApps.UpToDateCheckResponse.Message">
-            <summary>
-            root.response.message
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.SteamBaseParameters">
@@ -315,6 +329,22 @@
             <typeparam name="T">Type of object to return</typeparam>
             <returns>Parsed object of T type</returns>
         </member>
+        <member name="M:SteamdotNet.Parsing.JSONParser.SerializeFromObject``1(``0)">
+            <summary>
+            Serializes a given object into a JSON string.
+            </summary>
+            <param name="source">Object to serialize</param>
+            <typeparam name="T">Object type</typeparam>
+            <returns>JSON String</returns>
+        </member>
+        <member name="M:SteamdotNet.Parsing.JSONParser.DeserializeToObject``1(System.String)">
+            <summary>
+            Deserializes a given JSON string into an object
+            </summary>
+            <param name="source">JSON string</param>
+            <typeparam name="T">Object type</typeparam>
+            <returns>Deserialized object</returns>
+        </member>
         <member name="T:SteamdotNet.Parsing.VDFParser">
             <summary>
             
@@ -327,29 +357,29 @@
         </member>
         <member name="T:SteamdotNet.SteamApps">
             <summary>
-            
+            Implements the ISteamApps interface and all its methods
             </summary>
         </member>
-        <member name="M:SteamdotNet.SteamApps.GetAppList(SteamdotNet.Common.SteamAppsParameters.GetAppList)">
+        <member name="M:SteamdotNet.SteamApps.GetAppList(SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetAppList)">
             <summary>
-            
+            ISteamApps.GetAppList
             </summary>
-            <param name="parameters"></param>
-            <returns></returns>
+            <param name="parameters">GetAppList parameters(key, output format[optional], language [optional])</param>
+            <returns>Full list of every publicly facing program in the store/library</returns>
         </member>
-        <member name="M:SteamdotNet.SteamApps.GetServersAtAddress(SteamdotNet.Common.SteamAppsParameters.GetServersAtAddress)">
+        <member name="M:SteamdotNet.SteamApps.GetServersAtAddress(SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetServersAtAddress)">
             <summary>
-            
+            ISteamApps.GetServersAtAddress
             </summary>
-            <param name="parameters"></param>
-            <returns></returns>
+            <param name="parameters">GetServersAtAddress parameters(IPv4 address, key, output format[optional], language [optional])</param>
+            <returns>Shows all steam-compatible servers related to a IPv4 Address. </returns>
         </member>
-        <member name="M:SteamdotNet.SteamApps.UpToDateCheck(SteamdotNet.Common.SteamAppsParameters.UpToDateCheck)">
+        <member name="M:SteamdotNet.SteamApps.UpToDateCheck(SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck)">
             <summary>
-            
+            ISteamApps.UpToDateCheck
             </summary>
-            <param name="parameters"></param>
-            <returns></returns>
+            <param name="parameters">UpToDateCheck parameters(application id, version installed, key, output format[optional], language [optional])</param>
+            <returns>Check if a given application version is the most current available. </returns>
         </member>
         <member name="T:SteamdotNet.SteamdotNetFactory">
             <summary>

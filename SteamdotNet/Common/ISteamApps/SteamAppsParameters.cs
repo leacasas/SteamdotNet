@@ -1,4 +1,4 @@
-﻿namespace SteamdotNet.Common
+﻿namespace SteamdotNet.Common.ISteamApps
 {
     /// <summary>
     /// Contains the parameters for the ISteamApps interface.
