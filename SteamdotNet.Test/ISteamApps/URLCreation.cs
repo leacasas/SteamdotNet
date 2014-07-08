@@ -10,7 +10,7 @@ namespace SteamdotNet.Test.ISteamApps
         [TestMethod]
         public void TestGetAppList()
         {
-            var parameters = new SteamAppsParameters.GetAppList();
+            var parameters = new SteamAppsParameters.GetAppList("169C903286C458B4B49D90D77C447295");
             var result = SteamdotNetFactory.CreateMethodUrl("http://api.steampowered.com/ISteamApps/GetAppList/v2", parameters.BaseParameters, parameters);
             Assert.IsFalse(String.IsNullOrEmpty(result), "The URL is null or empty.");
             Assert.IsTrue(result.Contains(parameters.BaseParameters.Key));
@@ -21,7 +21,7 @@ namespace SteamdotNet.Test.ISteamApps
         [TestMethod]
         public void TestGetServersAtAddress()
         {
-            var parameters = new SteamAppsParameters.GetServersAtAddress("127.0.0.1");
+            var parameters = new SteamAppsParameters.GetServersAtAddress("127.0.0.1", "169C903286C458B4B49D90D77C447295");
             var result = SteamdotNetFactory.CreateMethodUrl("http://api.steampowered.com/ISteamApps/GetServersAtAddress/v1", parameters.BaseParameters, parameters);
             Assert.IsFalse(String.IsNullOrEmpty(result), "The URL is null or empty.");
             Assert.IsTrue(result.Contains(parameters.BaseParameters.Key));
@@ -33,7 +33,7 @@ namespace SteamdotNet.Test.ISteamApps
         [TestMethod]
         public void TestUpToDateCheck()
         {
-            var parameters = new SteamAppsParameters.UpToDateCheck(440, 1);
+            var parameters = new SteamAppsParameters.UpToDateCheck(440, 1, "169C903286C458B4B49D90D77C447295");
             var result = SteamdotNetFactory.CreateMethodUrl("http://api.steampowered.com/ISteamApps/UpToDateCheck/v1", parameters.BaseParameters, parameters);
             Assert.IsFalse(String.IsNullOrEmpty(result), "The URL is null or empty.");
             Assert.IsTrue(result.Contains(parameters.BaseParameters.Key));

@@ -10,17 +10,6 @@ namespace SteamdotNet
     public sealed class SteamdotNetFactory
     {
         /// <summary>
-        /// Factory method. It creates a SteamBaseParameters object with its values
-        /// read from the configuration.
-        /// </summary>
-        /// <returns>SteamBaseParameters object</returns>
-        public static SteamBaseParameters CreateBaseParameters()
-        {
-            //TODO: Read key from configuration, manage language values
-            return new SteamBaseParameters("169C903286C458B4B49D90D77C447295", OutputFileFormat.JSON, "en");
-        }
-
-        /// <summary>
         /// Construct a valid call to the given API method providing the base URL and
         /// all the optional and required parameters.
         /// </summary>

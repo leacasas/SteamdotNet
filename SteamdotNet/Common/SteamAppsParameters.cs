@@ -15,12 +15,20 @@
             /// <summary>
             /// Key, Format and Language parameters.
             /// </summary>
-            public SteamBaseParameters BaseParameters
+            public SteamBaseParameters BaseParameters { get; private set; }
+
+            /// <summary>
+            /// Constructs the parameters for ISteamApps.GetAppList
+            /// </summary>
+            /// <param name="key">Steam API developer key</param>
+            /// <param name="format">Output file format</param>
+            /// <param name="language">ISO639-1 country code</param>
+            public GetAppList(string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
             {
-                get { return SteamdotNetFactory.CreateBaseParameters(); }
+                BaseParameters = new SteamBaseParameters(key, format, language);
             }
         }
-
+        
         /// <summary>
         /// Parameters for ISteamApps.GetServersAtAddress
         /// </summary>
@@ -29,10 +37,7 @@
             /// <summary>
             /// Key, Format and Language parameters.
             /// </summary>
-            public SteamBaseParameters BaseParameters
-            {
-                get { return SteamdotNetFactory.CreateBaseParameters(); }
-            }
+            public SteamBaseParameters BaseParameters { get; private set; }
 
             /// <summary>
             /// IP address of the server (IPv4 format)
@@ -43,9 +48,13 @@
             /// Constructs the parameters for ISteamApps.GetServersAtAddress
             /// </summary>
             /// <param name="addr">IP address of the server (IPv4 format)</param>
-            public GetServersAtAddress(string addr) : this()
+            /// <param name="key">Steam API developer key</param>
+            /// <param name="format">Output file format</param>
+            /// <param name="language">ISO639-1 country code</param>
+            public GetServersAtAddress(string addr, string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
             {
                 Addr = addr;
+                BaseParameters = new SteamBaseParameters(key, format, language);
             }
         }
 
@@ -57,10 +66,7 @@
             /// <summary>
             /// Key, Format and Language parameters.
             /// </summary>
-            public SteamBaseParameters BaseParameters
-            {
-                get { return SteamdotNetFactory.CreateBaseParameters(); }
-            }
+            public SteamBaseParameters BaseParameters { get; private set; }
 
             /// <summary>
             /// AppID of game. For example, Team Fortress 2 is 440.
@@ -73,14 +79,18 @@
             public uint Version { get; set; }
 
             /// <summary>
-            /// Construct the parameters for ISteamApps.UpToDateCheck
+            /// Creates the parameters for ISteamApps.UpToDateCheck
             /// </summary>
-            /// <param name="appid">AppID of game. For example, Team Fortress 2 is 440.</param>
-            /// <param name="version">Installed version of the game.</param>
-            public UpToDateCheck(uint appid, uint version) : this()
+            /// <param name="appid"></param>
+            /// <param name="version"></param>
+            /// <param name="key">Steam API developer key</param>
+            /// <param name="format">Output file format</param>
+            /// <param name="language">ISO639-1 country code</param>
+            public UpToDateCheck(uint appid, uint version, string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
             {
                 AppId = appid;
                 Version = version;
+                BaseParameters = new SteamBaseParameters(key, format, language);
             }
         }
     }

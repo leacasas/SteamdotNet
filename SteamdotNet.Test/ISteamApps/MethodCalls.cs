@@ -11,7 +11,7 @@ namespace SteamdotNet.Test.ISteamApps
         public void TestGetAppList()
         {
             var steamAppsInterface = new SteamApps();
-            var parameters = new SteamAppsParameters.GetAppList();
+            var parameters = new SteamAppsParameters.GetAppList("169C903286C458B4B49D90D77C447295");
             var result = steamAppsInterface.GetAppList(parameters);
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(GetAppList));
@@ -27,7 +27,7 @@ namespace SteamdotNet.Test.ISteamApps
         public void TestGetServerAtAddress()
         {
             var steamAppsInterface = new SteamApps();
-            var parameters = new SteamAppsParameters.GetServersAtAddress("64.94.100.204");
+            var parameters = new SteamAppsParameters.GetServersAtAddress("64.94.100.204", "169C903286C458B4B49D90D77C447295");
             var result = steamAppsInterface.GetServersAtAddress(parameters);
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(GetServersAtAddress));
@@ -43,7 +43,7 @@ namespace SteamdotNet.Test.ISteamApps
         public void TestUpToDateCheck()
         {
             var steamAppsInterface = new SteamApps();
-            var parameters = new SteamAppsParameters.UpToDateCheck(440, 1);
+            var parameters = new SteamAppsParameters.UpToDateCheck(440, 1, "169C903286C458B4B49D90D77C447295");
             var result = steamAppsInterface.UpToDateCheck(parameters);
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(UpToDateCheck));
