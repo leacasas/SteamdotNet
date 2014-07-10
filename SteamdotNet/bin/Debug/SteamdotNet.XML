@@ -20,37 +20,37 @@
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.GetAppList">
             <summary>
-            JSON: Root object
+            GetAppList: Root object
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.GetAppList.Applist">
             <summary>
-            JSON: root.applist
+            GetAppList: root.applist
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.App">
             <summary>
-            JSON: root.applist.apps
+            GetAppList: root.applist.apps
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.App.Appid">
             <summary>
-            JSON: root.applist.apps[].appid
+            GetAppList: root.applist.apps[].appid
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.App.Name">
             <summary>
-            JSON: root.applist.apps[].name
+            GetAppList: root.applist.apps[].name
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.AppList">
             <summary>
-            JSON: root.applist
+            GetAppList: root.applist
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.AppList.Apps">
             <summary>
-            JSON: root.applist.apps
+            GetAppList: root.applist.apps
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddress">
@@ -317,7 +317,7 @@
         </member>
         <member name="T:SteamdotNet.Parsing.JSONParser">
             <summary>
-            First rudimentary implementation of a JSON parser, reading a JSON file from a REST service.
+            JSON Parser.
             </summary>
         </member>
         <member name="M:SteamdotNet.Parsing.JSONParser.ParseFromURL``1(System.String)">
@@ -352,7 +352,7 @@
         </member>
         <member name="T:SteamdotNet.Parsing.XMLParser">
             <summary>
-            
+            XML Parser
             </summary>
         </member>
         <member name="M:SteamdotNet.Parsing.XMLParser.ParseFromURL``1(System.String)">
