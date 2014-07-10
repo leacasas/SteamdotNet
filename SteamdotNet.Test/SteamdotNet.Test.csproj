@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Common\ComplexXMLDummy.cs" />
     <Compile Include="Common\JsonDummy.cs" />
     <Compile Include="Common\XMLDummy.cs" />
     <Compile Include="ISteamApps\MethodCalls.cs" />
