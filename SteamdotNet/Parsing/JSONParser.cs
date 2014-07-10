@@ -5,7 +5,7 @@ using System.Net.Http;
 namespace SteamdotNet.Parsing
 {
     /// <summary>
-    /// First rudimentary implementation of a JSON parser, reading a JSON file from a REST service.
+    /// JSON Parser.
     /// </summary>
     public sealed class JSONParser : BaseParser
     {

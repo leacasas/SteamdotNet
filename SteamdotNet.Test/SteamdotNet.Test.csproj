@@ -36,6 +36,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -51,10 +53,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Common\JsonDummy.cs" />
+    <Compile Include="Common\XMLDummy.cs" />
     <Compile Include="ISteamApps\MethodCalls.cs" />
     <Compile Include="ISteamApps\DataSerialization.cs" />
     <Compile Include="ISteamApps\URLCreation.cs" />
     <Compile Include="Parsing\JSONParserTest.cs" />
+    <Compile Include="Parsing\XMLParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

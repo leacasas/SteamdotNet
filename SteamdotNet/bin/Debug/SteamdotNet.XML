@@ -355,6 +355,15 @@
             
             </summary>
         </member>
+        <member name="M:SteamdotNet.Parsing.XMLParser.ParseFromURL``1(System.String)">
+            <summary>
+            Parses a JSON from a service call to a given object type.
+            It deserializes directly to a stream to reduce memory usage.
+            </summary>
+            <param name="url">URL of the service to call</param>
+            <typeparam name="T">Type of object to return</typeparam>
+            <returns>Parsed object of T type</returns>
+        </member>
         <member name="T:SteamdotNet.SteamApps">
             <summary>
             Implements the ISteamApps interface and all its methods
