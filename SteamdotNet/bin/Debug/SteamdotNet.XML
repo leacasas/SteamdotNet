@@ -55,92 +55,92 @@
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddress">
             <summary>
-            JSON: Root object
+            GetServersAtAddress: Root object
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddress.Response">
             <summary>
-            JSON: root.response
+            GetServersAtAddress: root.response
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.Server">
             <summary>
-            JSON: root.reponse.server[]
+            GetServersAtAddress: root.reponse.server[]
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Addr">
             <summary>
-            JSON:  root.response.server[].addr
+            GetServersAtAddress:  root.response.server[].addr
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Gmsindex">
             <summary>
-            JSON:  root.response.server[].gmsindex
+            GetServersAtAddress:  root.response.server[].gmsindex
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Appid">
             <summary>
-            JSON:  root.response.server[].appid
+            GetServersAtAddress:  root.response.server[].appid
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Gamedir">
             <summary>
-            JSON:  root.response.server[].gamedir
+            GetServersAtAddress:  root.response.server[].gamedir
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Region">
             <summary>
-            JSON:  root.response.server[].region
+            GetServersAtAddress:  root.response.server[].region
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Secure">
             <summary>
-            JSON:  root.response.server[].secure
+            GetServersAtAddress:  root.response.server[].secure
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Lan">
             <summary>
-            JSON:  root.response.server[].lan
+            GetServersAtAddress:  root.response.server[].lan
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Gameport">
             <summary>
-            JSON:  root.response.server[].gameport
+            GetServersAtAddress:  root.response.server[].gameport
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.Server.Specport">
             <summary>
-            JSON:  root.response.server[].specport
+            GetServersAtAddress:  root.response.server[].specport
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddressResponse">
             <summary>
-            JSON: root.response
+            GetServersAtAddress: root.response
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddressResponse.Success">
             <summary>
-            JSON: root.response.success
+            GetServersAtAddress: root.response.success
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.GetServersAtAddressResponse.Servers">
             <summary>
-            JSON: root.success.servers[]
+            GetServersAtAddress: root.success.servers[]
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.UpToDateCheck">
             <summary>
-            JSON: root object
+            UpToDateCheck: root object
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheck.Response">
             <summary>
-            JSON: root.response
+            UpToDateCheck: root.response
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse">
             <summary>
-            JSON: root.response
+            UpToDateCheck: root.response
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.ISteamApps.Data.UpToDateCheckResponse.Success">
