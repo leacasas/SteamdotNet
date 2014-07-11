@@ -31,6 +31,37 @@ namespace SteamdotNet.Parsing
             }
         }
 
+        /// <summary>
+        /// Serializes a given object into XML.
+        /// </summary>
+        /// <param name="source">Object to serialize</param>
+        /// <typeparam name="T">Object type</typeparam>
+        /// <returns>Serialized object into a XML String</returns>
+        public override string SerializeFromObject<T>(T source)
+        {
+            using (var writer = new StringWriter())
+            {
+                var serializer = new XmlSerializer(typeof(T));
+                serializer.Serialize(writer, source);
+                return writer.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Deserializes a given XML into an object
+        /// </summary>
+        /// <param name="source">string containing the XML Document</param>
+        /// <typeparam name="T">Object type</typeparam>
+        /// <returns>Deserialized object</returns>
+        public override T DeserializeToObject<T>(string source)
+        {
+            using (var reader = new StringReader(source))
+            {
+                var serializer = new XmlSerializer(typeof(T));
+                return (T)serializer.Deserialize(reader);
+            }
+        }
+
         private Type GetXMLRootFieldType(Type rootType, out string fieldName)
         {
             fieldName = string.Empty;

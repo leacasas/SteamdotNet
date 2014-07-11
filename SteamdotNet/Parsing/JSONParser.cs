@@ -27,13 +27,14 @@ namespace SteamdotNet.Parsing
             }
         }
 
+        
         /// <summary>
         /// Serializes a given object into a JSON string.
         /// </summary>
         /// <param name="source">Object to serialize</param>
         /// <typeparam name="T">Object type</typeparam>
-        /// <returns>JSON String</returns>
-        public string SerializeFromObject<T>(T source)
+        /// <returns>Serialized object into a JSON String</returns>
+        public override string SerializeFromObject<T>(T source)
         {
             return JsonConvert.SerializeObject(source);
         }
@@ -44,7 +45,7 @@ namespace SteamdotNet.Parsing
         /// <param name="source">JSON string</param>
         /// <typeparam name="T">Object type</typeparam>
         /// <returns>Deserialized object</returns>
-        public T DeserializeToObject<T>(string source)
+        public override T DeserializeToObject<T>(string source)
         {
             return JsonConvert.DeserializeObject<T>(source);
         }

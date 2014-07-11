@@ -315,6 +315,24 @@
             <returns></returns>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
+        <member name="M:SteamdotNet.Parsing.BaseParser.SerializeFromObject``1(``0)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:SteamdotNet.Parsing.BaseParser.DeserializeToObject``1(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
         <member name="T:SteamdotNet.Parsing.JSONParser">
             <summary>
             JSON Parser.
@@ -335,7 +353,7 @@
             </summary>
             <param name="source">Object to serialize</param>
             <typeparam name="T">Object type</typeparam>
-            <returns>JSON String</returns>
+            <returns>Serialized object into a JSON String</returns>
         </member>
         <member name="M:SteamdotNet.Parsing.JSONParser.DeserializeToObject``1(System.String)">
             <summary>
@@ -363,6 +381,22 @@
             <param name="url">URL of the service to call</param>
             <typeparam name="T">Type of object to return</typeparam>
             <returns>Parsed object of T type</returns>
+        </member>
+        <member name="M:SteamdotNet.Parsing.XMLParser.SerializeFromObject``1(``0)">
+            <summary>
+            Serializes a given object into XML.
+            </summary>
+            <param name="source">Object to serialize</param>
+            <typeparam name="T">Object type</typeparam>
+            <returns>Serialized object into a XML String</returns>
+        </member>
+        <member name="M:SteamdotNet.Parsing.XMLParser.DeserializeToObject``1(System.String)">
+            <summary>
+            Deserializes a given XML into an object
+            </summary>
+            <param name="source">string containing the XML Document</param>
+            <typeparam name="T">Object type</typeparam>
+            <returns>Deserialized object</returns>
         </member>
         <member name="T:SteamdotNet.SteamApps">
             <summary>
