@@ -18,5 +18,29 @@ namespace SteamdotNet.Parsing
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public virtual string SerializeFromObject<T>(T source)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public virtual T DeserializeToObject<T>(string source)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

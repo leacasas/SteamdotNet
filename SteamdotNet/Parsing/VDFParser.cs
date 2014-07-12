@@ -11,5 +11,10 @@ namespace SteamdotNet.Parsing
         {
             throw new NotImplementedException();
         }
+
+        public override string SerializeFromObject<T>(T source)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
