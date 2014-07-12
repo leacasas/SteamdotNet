@@ -44,7 +44,5 @@ namespace SteamdotNet
             BaseParser parser = ResolveParserType(parameters.BaseParameters.Format);
             return parser.ParseFromURL<UpToDateCheck>(SteamdotNetFactory.CreateMethodUrl(baseURL, parameters.BaseParameters, parameters));
         }
-
-        
     }
 }

@@ -23,7 +23,7 @@
             /// <param name="key">Steam API developer key</param>
             /// <param name="format">Output file format</param>
             /// <param name="language">ISO639-1 country code</param>
-            public GetAppList(string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
+            public GetAppList(string key, OutputFileFormat format = OutputFileFormat.JSON, OutputLanguage language = OutputLanguage.EN) : this()
             {
                 BaseParameters = new SteamBaseParameters(key, format, language);
             }
@@ -51,7 +51,7 @@
             /// <param name="key">Steam API developer key</param>
             /// <param name="format">Output file format</param>
             /// <param name="language">ISO639-1 country code</param>
-            public GetServersAtAddress(string addr, string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
+            public GetServersAtAddress(string addr, string key, OutputFileFormat format = OutputFileFormat.JSON, OutputLanguage language = OutputLanguage.EN) : this()
             {
                 BaseParameters = new SteamBaseParameters(key, format, language);
                 Addr = addr;
@@ -86,7 +86,7 @@
             /// <param name="key">Steam API developer key</param>
             /// <param name="format">Output file format</param>
             /// <param name="language">ISO639-1 country code</param>
-            public UpToDateCheck(uint appid, uint version, string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
+            public UpToDateCheck(uint appid, uint version, string key, OutputFileFormat format = OutputFileFormat.JSON, OutputLanguage language = OutputLanguage.EN) : this()
             {
                 BaseParameters = new SteamBaseParameters(key, format, language);
                 AppId = appid;

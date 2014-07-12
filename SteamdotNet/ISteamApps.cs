@@ -1,5 +1,4 @@
-﻿using SteamdotNet.Common;
-using SteamdotNet.Common.ISteamApps;
+﻿using SteamdotNet.Common.ISteamApps;
 using SteamdotNet.Common.ISteamApps.Data;
 
 namespace SteamdotNet

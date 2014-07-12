@@ -27,7 +27,6 @@ namespace SteamdotNet.Parsing
             }
         }
 
-        
         /// <summary>
         /// Serializes a given object into a JSON string.
         /// </summary>

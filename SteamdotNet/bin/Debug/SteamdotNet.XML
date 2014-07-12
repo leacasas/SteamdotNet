@@ -180,7 +180,7 @@
             Parameters for ISteamApps.GetAppList
             </summary>
         </member>
-        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetAppList.#ctor(System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetAppList.#ctor(System.String,SteamdotNet.Common.OutputFileFormat,SteamdotNet.Common.OutputLanguage)">
             <summary>
             Constructs the parameters for ISteamApps.GetAppList
             </summary>
@@ -198,7 +198,7 @@
             Parameters for ISteamApps.GetServersAtAddress
             </summary>
         </member>
-        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetServersAtAddress.#ctor(System.String,System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetServersAtAddress.#ctor(System.String,System.String,SteamdotNet.Common.OutputFileFormat,SteamdotNet.Common.OutputLanguage)">
             <summary>
             Constructs the parameters for ISteamApps.GetServersAtAddress
             </summary>
@@ -222,7 +222,7 @@
             Parameters for ISteamApps.UpToDateCheck
             </summary>
         </member>
-        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck.#ctor(System.UInt32,System.UInt32,System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+        <member name="M:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck.#ctor(System.UInt32,System.UInt32,System.String,SteamdotNet.Common.OutputFileFormat,SteamdotNet.Common.OutputLanguage)">
             <summary>
             Creates the parameters for ISteamApps.UpToDateCheck
             </summary>
@@ -267,32 +267,134 @@
             Valve Data Format output
             </summary>
         </member>
-        <member name="T:SteamdotNet.Common.SteamBaseParameters">
+        <member name="T:SteamdotNet.Common.OutputLanguage">
             <summary>
-            
+            Contains all codes for the most common languages according to ISO 639-1 standards
             </summary>
         </member>
-        <member name="M:SteamdotNet.Common.SteamBaseParameters.#ctor(System.String,SteamdotNet.Common.OutputFileFormat,System.String)">
+        <member name="F:SteamdotNet.Common.OutputLanguage.NL">
             <summary>
-            
+            Dutch
             </summary>
-            <param name="key"></param>
-            <param name="format"></param>
-            <param name="language"></param>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.EN">
+            <summary>
+            English
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.FR">
+            <summary>
+            French
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.DE">
+            <summary>
+            German
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.EL">
+            <summary>
+            Greek
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.IT">
+            <summary>
+            Italian
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.JA">
+            <summary>
+            Japanese
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.PT">
+            <summary>
+            Portuguese
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.RU">
+            <summary>
+            Russian
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.ES">
+            <summary>
+            Spanish
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.SV">
+            <summary>
+            Swedish
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.TR">
+            <summary>
+            Turkish
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.ZH">
+            <summary>
+            Chinese
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.AR">
+            <summary>
+            Arabic
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.KO">
+            <summary>
+            Korean
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.NO">
+            <summary>
+            Norwegian
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.PL">
+            <summary>
+            Polish
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.RO">
+            <summary>
+            Romanian
+            </summary>
+        </member>
+        <member name="F:SteamdotNet.Common.OutputLanguage.UK">
+            <summary>
+            Ukrainian
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.SteamBaseParameters">
+            <summary>
+            This class encapsulates three parameters that are shared
+            across all methods of all interfaces of the Steam Web API.
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.SteamBaseParameters.#ctor(System.String,SteamdotNet.Common.OutputFileFormat,SteamdotNet.Common.OutputLanguage)">
+            <summary>
+            Construct the common parameters.
+            </summary>
+            <param name="key">Steam API developer key</param>
+            <param name="format">Output file format</param>
+            <param name="language">ISO 639-1 language code</param>
+            <exception cref="T:SteamdotNet.Exceptions.InvalidDeveloperKeyException">The provided Steam Developer key is invalid</exception>
         </member>
         <member name="P:SteamdotNet.Common.SteamBaseParameters.Key">
             <summary>
-            
+            Steam Developer Key
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.SteamBaseParameters.Format">
             <summary>
-            
+            Output file format. JSON, XML or Valve Data Format
             </summary>
         </member>
         <member name="P:SteamdotNet.Common.SteamBaseParameters.Language">
             <summary>
-            
+            Output language. ISO 639-1 code format.
             </summary>
         </member>
         <member name="T:SteamdotNet.Exceptions.InvalidDeveloperKeyException">

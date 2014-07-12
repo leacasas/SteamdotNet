@@ -52,6 +52,7 @@
     <Compile Include="Common\ISteamApps\Data\UpToDateCheck.cs" />
     <Compile Include="Common\ISteamApps\SteamAppsParameters.cs" />
     <Compile Include="Common\OutputFileFormat.cs" />
+    <Compile Include="Common\OutputLanguage.cs" />
     <Compile Include="Common\SteamBaseParameters.cs" />
     <Compile Include="Exceptions\InvalidDeveloperKeyException.cs" />
     <Compile Include="ISteamApps.cs" />
