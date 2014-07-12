@@ -53,8 +53,8 @@
             /// <param name="language">ISO639-1 country code</param>
             public GetServersAtAddress(string addr, string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
             {
-                Addr = addr;
                 BaseParameters = new SteamBaseParameters(key, format, language);
+                Addr = addr;
             }
         }
 
@@ -88,9 +88,9 @@
             /// <param name="language">ISO639-1 country code</param>
             public UpToDateCheck(uint appid, uint version, string key, OutputFileFormat format = OutputFileFormat.JSON, string language = "en") : this()
             {
+                BaseParameters = new SteamBaseParameters(key, format, language);
                 AppId = appid;
                 Version = version;
-                BaseParameters = new SteamBaseParameters(key, format, language);
             }
         }
     }

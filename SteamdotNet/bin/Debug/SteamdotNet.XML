@@ -295,6 +295,12 @@
             
             </summary>
         </member>
+        <member name="T:SteamdotNet.Exceptions.InvalidDeveloperKeyException">
+            <summary>
+            Exception thrown when the an invalid Steam developer key
+            is provided whenever requested.
+            </summary>
+        </member>
         <member name="T:SteamdotNet.ISteamApps">
             <summary>
             Holds the same methods as the ISteamApps interface from

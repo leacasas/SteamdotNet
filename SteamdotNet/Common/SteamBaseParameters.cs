@@ -1,4 +1,6 @@
-﻿namespace SteamdotNet.Common
+﻿using SteamdotNet.Exceptions;
+
+namespace SteamdotNet.Common
 {
     /// <summary>
     /// 
@@ -28,6 +30,8 @@
         /// <param name="language"></param>
         public SteamBaseParameters(string key, OutputFileFormat format, string language) : this()
         {
+            if(string.IsNullOrEmpty(key)|string.IsNullOrWhiteSpace(key))
+                throw new InvalidDeveloperKeyException();
             Key = key;
             Format = format;
             Language = language;
