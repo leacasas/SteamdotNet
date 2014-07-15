@@ -92,7 +92,12 @@
             /// <param name="format">Output file format</param>
             /// <param name="language">Output language (ISO 639-1 code)</param>
             /// <param name="currency">The ISO 4217 code for currency specific filtering. For example: US dollars is USD.</param>
-            public GetAssetPrices(uint appid, string key, OutputFileFormat format, OutputLanguage language, string currency) : this()
+            public GetAssetPrices(
+                uint appid, 
+                string key, 
+                OutputFileFormat format = OutputFileFormat.JSON, 
+                OutputLanguage language = OutputLanguage.EN, 
+                string currency = "USD") : this()
             {
                 BaseParameters = new SteamBaseParameters(key, format, language);
                 AppId = appid;

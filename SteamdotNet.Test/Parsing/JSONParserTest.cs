@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SteamdotNet.Common.ISteamEconomy.Data;
 using SteamdotNet.Parsing;
 using SteamdotNet.Test.Common;
 using System;
@@ -32,6 +33,15 @@ namespace SteamdotNet.Test.Parsing
             Assert.IsFalse(String.IsNullOrEmpty(result), "SerializeFromObject method returned a null or empty string");
             Assert.IsTrue(result.Contains("Ip"), "The JSON returned is not valid");
             Assert.IsTrue(result.Contains(testIP), "The JSON returned is not valid");
+        }
+
+        [TestMethod]
+        public void DeserializeObject()
+        {
+            const string json = @"{'result':{'195151':{},'16891096':{},'success':true}}";
+            var parser = new JSONParser();
+            var result = parser.DeserializeToObject<GetAssetClassInfo>(json);
+            Assert.IsNotNull(result);
         }
     }
 }

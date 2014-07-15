@@ -59,6 +59,7 @@
     <Compile Include="ISteamApps\MethodCalls.cs" />
     <Compile Include="ISteamApps\DataSerialization.cs" />
     <Compile Include="ISteamApps\URLCreation.cs" />
+    <Compile Include="ISteamEconomy\MethodCalls.cs" />
     <Compile Include="ISteamEconomy\URLCreation.cs" />
     <Compile Include="Parsing\JSONParserTest.cs" />
     <Compile Include="Parsing\XMLParserTest.cs" />

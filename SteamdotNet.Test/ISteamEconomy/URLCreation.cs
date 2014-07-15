@@ -25,5 +25,18 @@ namespace SteamdotNet.Test.ISteamEconomy
             Assert.IsTrue(result.Contains(classIds[0].ToString()));
             Assert.IsTrue(result.Contains(classIds[1].ToString()));
         }
+
+        [TestMethod]
+        public void TestGetAssetPrices()
+        {
+            var appid = 440u;
+            var parameters = new SteamEconomyParameters.GetAssetPrices(appid, "169C903286C458B4B49D90D77C447295");
+            string result = SteamdotNetFactory.CreateMethodUrl("http://api.steampowered.com/ISteamEconomy/GetAssetPrices/v0001", parameters.BaseParameters, parameters);
+            Assert.IsFalse(String.IsNullOrEmpty(result), "The URL is null or empty.");
+            Assert.IsTrue(result.Contains(parameters.BaseParameters.Key));
+            Assert.IsTrue(result.Contains(parameters.BaseParameters.Format.ToString()));
+            Assert.IsTrue(result.Contains(parameters.BaseParameters.Language.ToString()));
+            Assert.IsTrue(result.Contains(appid.ToString()));
+        }
     }
 }
