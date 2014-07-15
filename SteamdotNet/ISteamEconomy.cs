@@ -9,5 +9,6 @@ namespace SteamdotNet
     internal interface ISteamEconomy
     {
         GetAssetClassInfo GetAssetClassInfo(SteamEconomyParameters.GetAssetClassInfo parameters);
+        GetAssetPrices GetAssetPrices(SteamEconomyParameters.GetAssetPrices parameters);
     }
 }

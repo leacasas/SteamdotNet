@@ -14,5 +14,10 @@ namespace SteamdotNet
         {
             throw new System.NotImplementedException();
         }
+
+        public GetAssetPrices GetAssetPrices(SteamEconomyParameters.GetAssetPrices parameters)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

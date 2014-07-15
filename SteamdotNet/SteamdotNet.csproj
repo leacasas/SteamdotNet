@@ -52,6 +52,7 @@
     <Compile Include="Common\ISteamApps\Data\UpToDateCheck.cs" />
     <Compile Include="Common\ISteamApps\SteamAppsParameters.cs" />
     <Compile Include="Common\ISteamEconomy\Data\GetAssetClassInfo.cs" />
+    <Compile Include="Common\ISteamEconomy\Data\GetAssetPrices.cs" />
     <Compile Include="Common\ISteamEconomy\SteamEconomyParameters.cs" />
     <Compile Include="Common\OutputFileFormat.cs" />
     <Compile Include="Common\OutputLanguage.cs" />

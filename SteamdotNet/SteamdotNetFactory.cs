@@ -1,5 +1,7 @@
 ﻿using SteamdotNet.Common;
+using System;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace SteamdotNet
@@ -23,10 +25,19 @@ namespace SteamdotNet
             var urlBuilder = new StringBuilder();
             urlBuilder.AppendFormat("{0}?key={1}&format={2}&language={3}", baseURL, baseParameters.Key, baseParameters.Format, baseParameters.Language);
             foreach (var propertyInfo in parameters.GetType().GetProperties().Where(propertyInfo => propertyInfo.PropertyType != typeof(SteamBaseParameters)))
-            {
-                urlBuilder.AppendFormat("&{0}={1}", propertyInfo.Name, propertyInfo.GetValue(parameters, null));
-            }
+                urlBuilder.Append(propertyInfo.PropertyType.IsArray ? BuildArrayParameters(parameters, propertyInfo) : string.Format("&{0}={1}", propertyInfo.Name, propertyInfo.GetValue(parameters, null)));
             return urlBuilder.ToString();
+        }
+
+        private static string BuildArrayParameters<T>(T parameters, PropertyInfo propertyInfo) where T : struct
+        {
+            var array = propertyInfo.GetValue(parameters, null) as Array;
+            if (array == null || array.Length == 0)
+                return string.Empty;
+            var builder = new StringBuilder();
+            for (var i = 0; i < array.Length; i++)
+                builder.AppendFormat("&{0}={1}", string.Format("{0}{1}", (propertyInfo.Name.Remove(propertyInfo.Name.Length - 1)), i), array.GetValue(i));
+            return builder.ToString();
         }
     }
 }
