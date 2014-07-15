@@ -171,7 +171,7 @@
         <member name="T:SteamdotNet.Common.ISteamApps.SteamAppsParameters">
             <summary>
             Contains the parameters for the ISteamApps interface.
-            It encapsulates the parameters for each method in structs.
+            It encapsulates the parameters for each method into structs.
             Cannot be inherited.
             </summary>
         </member>
@@ -245,6 +245,55 @@
         <member name="P:SteamdotNet.Common.ISteamApps.SteamAppsParameters.UpToDateCheck.Version">
             <summary>
             Installed version of the game.
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters">
+            <summary>
+            Contains the parameters for the ISteamEconomy interface.
+            It encapsulates the parameters for each method into structs.
+            Cannot be inherited.
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo">
+            <summary>
+            Parameters for ISteamEconomy.GetAssetClassInfo
+            </summary>
+        </member>
+        <member name="M:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo.#ctor(System.UInt32,System.UInt32,System.UInt64[],System.UInt64[],System.String,SteamdotNet.Common.OutputFileFormat,SteamdotNet.Common.OutputLanguage)">
+            <summary>
+            
+            </summary>
+            <param name="appid"></param>
+            <param name="classCount"></param>
+            <param name="classidn"></param>
+            <param name="instanceidn"></param>
+            <param name="key"></param>
+            <param name="format"></param>
+            <param name="language"></param>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo.BaseParameters">
+            <summary>
+            Key, Format and Language parameters.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo.AppId">
+            <summary>
+            AppID of game. For example, Team Fortress 2 is 440.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo.Class_Count">
+            <summary>
+            Amount of class ids passed to the request.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo.ClassIDn">
+            <summary>
+            Series of sequential numbers that form a list of class ids.
+            </summary>
+        </member>
+        <member name="P:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo.InstanceIDn">
+            <summary>
+            Instance ID of each class id passed.
             </summary>
         </member>
         <member name="T:SteamdotNet.Common.OutputFileFormat">
@@ -405,8 +454,12 @@
         </member>
         <member name="T:SteamdotNet.ISteamApps">
             <summary>
-            Holds the same methods as the ISteamApps interface from
-            the Steam Web API.
+            Methods related to the Steam APIs in general
+            </summary>
+        </member>
+        <member name="T:SteamdotNet.ISteamEconomy">
+            <summary>
+            Methods related to games' store's assets
             </summary>
         </member>
         <member name="T:SteamdotNet.Parsing.BaseParser">
@@ -508,7 +561,9 @@
         </member>
         <member name="T:SteamdotNet.SteamApps">
             <summary>
-            Implements the ISteamApps interface and all its methods
+            Implements the ISteamApps interface and all its methods.
+            Methods related to the Steam APIs in general.
+            Cannot be inherited.
             </summary>
         </member>
         <member name="M:SteamdotNet.SteamApps.GetAppList(SteamdotNet.Common.ISteamApps.SteamAppsParameters.GetAppList)">
@@ -547,6 +602,13 @@
             <param name="parameters">Method-specific parameters, they are contained in a struct</param>
             <typeparam name="T">struct</typeparam>
             <returns>Valid URL ready to call the API method</returns>
+        </member>
+        <member name="T:SteamdotNet.SteamEconomy">
+            <summary>
+            Implements the ISteamEconomy and all its methods.
+            Methods related to games' store's assets.
+            Cannot be inherited.
+            </summary>
         </member>
     </members>
 </doc>

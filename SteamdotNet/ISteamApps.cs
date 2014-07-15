@@ -4,8 +4,7 @@ using SteamdotNet.Common.ISteamApps.Data;
 namespace SteamdotNet
 {
     /// <summary>
-    /// Holds the same methods as the ISteamApps interface from
-    /// the Steam Web API.
+    /// Methods related to the Steam APIs in general
     /// </summary>
     internal interface ISteamApps
     {

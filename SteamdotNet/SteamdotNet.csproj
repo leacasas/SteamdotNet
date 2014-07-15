@@ -51,11 +51,14 @@
     <Compile Include="Common\ISteamApps\Data\GetServersAtAddress.cs" />
     <Compile Include="Common\ISteamApps\Data\UpToDateCheck.cs" />
     <Compile Include="Common\ISteamApps\SteamAppsParameters.cs" />
+    <Compile Include="Common\ISteamEconomy\Data\GetAssetClassInfo.cs" />
+    <Compile Include="Common\ISteamEconomy\SteamEconomyParameters.cs" />
     <Compile Include="Common\OutputFileFormat.cs" />
     <Compile Include="Common\OutputLanguage.cs" />
     <Compile Include="Common\SteamBaseParameters.cs" />
     <Compile Include="Exceptions\InvalidDeveloperKeyException.cs" />
     <Compile Include="ISteamApps.cs" />
+    <Compile Include="ISteamEconomy.cs" />
     <Compile Include="Parsing\BaseParser.cs" />
     <Compile Include="Parsing\JSONParser.cs" />
     <Compile Include="Parsing\VDFParser.cs" />
@@ -68,6 +71,7 @@
     </Compile>
     <Compile Include="SteamApps.cs" />
     <Compile Include="SteamdotNetFactory.cs" />
+    <Compile Include="SteamEconomy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

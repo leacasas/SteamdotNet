@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Common\ComplexXMLDummy.cs" />
     <Compile Include="Common\JsonDummy.cs" />
+    <Compile Include="Common\Parameters.cs" />
     <Compile Include="Common\XMLDummy.cs" />
     <Compile Include="ISteamApps\MethodCalls.cs" />
     <Compile Include="ISteamApps\DataSerialization.cs" />

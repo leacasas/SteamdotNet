@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Contains the parameters for the ISteamApps interface.
-    /// It encapsulates the parameters for each method in structs.
+    /// It encapsulates the parameters for each method into structs.
     /// Cannot be inherited.
     /// </summary>
     public sealed class SteamAppsParameters

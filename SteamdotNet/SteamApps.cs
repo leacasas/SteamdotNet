@@ -5,9 +5,11 @@ using SteamdotNet.Parsing;
 namespace SteamdotNet
 {
     /// <summary>
-    /// Implements the ISteamApps interface and all its methods
+    /// Implements the ISteamApps interface and all its methods.
+    /// Methods related to the Steam APIs in general.
+    /// Cannot be inherited.
     /// </summary>
-    public class SteamApps : BaseSteamImplementer, ISteamApps
+    public sealed class SteamApps : BaseSteamImplementer, ISteamApps
     {
         /// <summary>
         /// ISteamApps.GetAppList
