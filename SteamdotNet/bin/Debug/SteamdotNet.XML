@@ -303,7 +303,7 @@
         </member>
         <member name="M:SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetPrices.#ctor(System.UInt32,System.String,SteamdotNet.Common.OutputFileFormat,SteamdotNet.Common.OutputLanguage,System.String)">
             <summary>
-            Contructs the parameters for ISteamEconomy.GetAssetPrices
+            Constructs the parameters for ISteamEconomy.GetAssetPrices
             </summary>
             <param name="appid">AppID of game. For example, Team Fortress 2 is 440.</param>
             <param name="key">Steam Web API developer key</param>
@@ -639,6 +639,21 @@
             Methods related to games' store's assets.
             Cannot be inherited.
             </summary>
+        </member>
+        <member name="M:SteamdotNet.SteamEconomy.GetAssetClassInfo(SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetClassInfo)">
+            <summary>
+            Gets the asset class information.
+            </summary>
+            <param name="parameters">The parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SteamdotNet.SteamEconomy.GetAssetPrices(SteamdotNet.Common.ISteamEconomy.SteamEconomyParameters.GetAssetPrices)">
+            <summary>
+            Gets the asset prices.
+            </summary>
+            <param name="parameters">The parameters.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
         </member>
     </members>
 </doc>

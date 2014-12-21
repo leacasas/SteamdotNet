@@ -85,7 +85,7 @@
             public string Currency { get; set; }
 
             /// <summary>
-            /// Contructs the parameters for ISteamEconomy.GetAssetPrices
+            /// Constructs the parameters for ISteamEconomy.GetAssetPrices
             /// </summary>
             /// <param name="appid">AppID of game. For example, Team Fortress 2 is 440.</param>
             /// <param name="key">Steam Web API developer key</param>

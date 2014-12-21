@@ -54,6 +54,7 @@ namespace SteamdotNet.Test.ISteamApps
             Assert.IsNotNull(deserializedResult, "The parser returned a null object after trying to deserialize the JSON string.");
             Assert.AreEqual(getServersAtAddressResult.Response.Success, deserializedResult.Response.Success, "The field Success differs in value from the original");
             Assert.AreEqual(getServersAtAddressResult.Response.Servers.Length, deserializedResult.Response.Servers.Length, "The length of the field Servers differs in value from the original");
+            if (deserializedResult.Response.Servers.Length == 0) return;
             Assert.AreEqual(getServersAtAddressResult.Response.Servers[0].Addr, deserializedResult.Response.Servers[0].Addr, "The first element of the array Servers differs in value from the original (field: addr)");
             Assert.AreEqual(getServersAtAddressResult.Response.Servers[0].Appid, deserializedResult.Response.Servers[0].Appid, "The first element of the array Servers differs in value from the original (field: appid)");
             Assert.AreEqual(getServersAtAddressResult.Response.Servers[0].Gamedir, deserializedResult.Response.Servers[0].Gamedir, "The first element of the array Servers differs in value from the original (field: gamedir)");
@@ -78,6 +79,7 @@ namespace SteamdotNet.Test.ISteamApps
             Assert.IsNotNull(deserializedResult, "The parser returned a null object after trying to deserialize the XML string.");
             Assert.AreEqual(getServersAtAddressResult.Response.Success, deserializedResult.Response.Success, "The field Success differs in value from the original");
             Assert.AreEqual(getServersAtAddressResult.Response.Servers.Length, deserializedResult.Response.Servers.Length, "The length of the field Servers differs in value from the original");
+            if (deserializedResult.Response.Servers.Length == 0) return;
             Assert.AreEqual(getServersAtAddressResult.Response.Servers[0].Addr, deserializedResult.Response.Servers[0].Addr, "The first element of the array Servers differs in value from the original (field: addr)");
             Assert.AreEqual(getServersAtAddressResult.Response.Servers[0].Appid, deserializedResult.Response.Servers[0].Appid, "The first element of the array Servers differs in value from the original (field: appid)");
             Assert.AreEqual(getServersAtAddressResult.Response.Servers[0].Gamedir, deserializedResult.Response.Servers[0].Gamedir, "The first element of the array Servers differs in value from the original (field: gamedir)");
